@@ -1,0 +1,52 @@
+baseurl: '/etkinlik'
+permalink: pretty
+title:  Yeni Nesil Ağ ve Güvenlik Operasyonları
+
+google_analytics_id: ""
+
+homepage:
+  show_call_box: true
+
+logo:
+  mobile: "images/logo/logo-mobile.png"
+  desktop: "images/logo/logo.jpg"
+  desktop_height: "50px"
+
+footer:
+  copyright_text: '<a href="https://www.kommunity.com">Kommunity Organizasyonu</a> tarafından hazırlanmaktadır.'
+
+seo:
+  meta_og_title: "Yeni Nesil Ağ ve Güvenlik Operasyonları Etkinliği"
+  meta_og_type: "website"
+  meta_og_url: "http://www.abdullahoztuurkk.github.io/etkinlik"
+  meta_og_image: ""
+  meta_og_description: "Yeni Nesil Ağ ve Güvenlik Operasyonları Etkinliği"
+  meta_twitter_card: "Software Developer"
+  meta_twitter_site: "@AbdullahOztuurk"
+  meta_twitter_creator: "@AbdullahOztuurk"
+
+collections:
+  services:
+    output: true
+  team:
+    output: true
+
+sass:
+  indentWidth: 4
+  style: compact # possible values: nested expanded compact compressed
+  precision: 10
+
+plugins:
+  - jekyll-environment-variables
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md

@@ -1,0 +1,21 @@
+main:
+  - name: "Konular"
+    url: "/konular/"
+    weight: 2
+  - name: "Ekip"
+    url: "/takim/"
+    weight: 3
+  - name: "Hakkında"
+    url: "/hakkinda/"
+    weight: 4
+  - name: "İletişim"
+    url: "/iletisim/"
+    weight: 5
+
+footer:
+  - name: "Ana Sayfa"
+    url: "/"
+    weight: 1
+  - name: "İletişim"
+    url: "/iletisim/"
+    weight: 2
