@@ -1,4 +1,4 @@
-# Jekyll Etkinlik Ödevi
+# Jekyll Conference Homework
 
 The Next Generation Network and Security Operations event held on the Kommunity platform was made for the "Internet Technologies" course.
 
