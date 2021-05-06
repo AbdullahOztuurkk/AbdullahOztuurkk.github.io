@@ -1,6 +1,6 @@
 ---
 title: "Desteklenen Urunler"
-permalink: /desteklenen-urunler
+permalink: konular/desteklenen-urunler
 date: 2018-11-28T15:15:34+10:00
 featured: true
 weight: 4

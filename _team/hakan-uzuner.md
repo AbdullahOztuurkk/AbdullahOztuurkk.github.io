@@ -2,7 +2,7 @@
 title: "Hakan Uzuner"
 date: 2018-11-19T10:47:58+10:00
 draft: false
-image: "./images/team/hakan_uzuner.jpg"
+image: "./images/team/Hakan_uzuner.jpg"
 jobtitle: " Profesyonel Hizmetler Direktörü - ITSTACK Bilgi Sistemleri"
 linkedinurl: "https://www.linkedin.com/in/hakanuzuner/"
 promoted: true

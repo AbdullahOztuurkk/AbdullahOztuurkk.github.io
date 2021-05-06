@@ -1,6 +1,6 @@
 ---
 title: "Event Handler Yapısı"
-permalink: /event-handler-yapisi
+permalink: konular/event-handler-yapisi
 date: 2018-11-18T12:33:46+10:00
 featured: true
 weight: 6

@@ -3,7 +3,7 @@ main:
     url: "/konular/"
     weight: 2
   - name: "Ekip"
-    url: "/takim/"
+    url: "/ekip/"
     weight: 3
   - name: "Hakkında"
     url: "/hakkinda/"

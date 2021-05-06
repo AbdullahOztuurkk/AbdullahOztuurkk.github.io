@@ -1,7 +1,7 @@
 ---
-title: Team
+title: Ekip
 layout: teams
-permalink: /takim/
+permalink: /ekip/
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
