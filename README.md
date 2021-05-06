@@ -2,11 +2,14 @@
 
 The Next Generation Network and Security Operations event held on the Kommunity platform was made for the "Internet Technologies" course.
 
-[Live Demo](https://abdullahoztuurkk.github.io/) | 
+[Live Demo](https://abdullahoztuurkk.github.io/) 
 
-<p><img width="600px" src="./images/Homepage.png"></img></p>
+<p><img width="600px" src="./images/homepage.png"></img></p>
+&nbsp;
 <p><img width="600px" src="./images/about.png"></img></p>
+&nbsp;
 <p><img width="600px" src="./images/sections.png"></img></p>
+&nbsp;
 <p><img width="600px" src="./images/contact.png"></img></p>
 
 ## Installation
