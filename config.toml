@@ -1,10 +1,10 @@
-baseurl = "https://abdullahozturk.live"
+baseurl = "https://www.abdullahozturk.live/"
+canonifyURLs = true
 title = "Abdullah Öztürk"
 languageCode = "tr"
 defaultContentLanguage = "tr"
-paginate = "10" # Number of posts per page
+paginate = "5" # Number of posts per page
 theme = "mainroad"
-canonifyURLs = true
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
