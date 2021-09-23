@@ -2,7 +2,7 @@
 # Common-Defined params
 title: "CQRS ( Command Query Responsibility Segregation) Nedir?"
 date: "2021-01-21"
-categories:
+tags:
   - "dotnet"
   - "cqrs"
 

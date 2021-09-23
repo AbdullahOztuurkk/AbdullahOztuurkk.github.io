@@ -2,7 +2,7 @@
 # Common-Defined params
 title: "Dependency Injection Nedir?"
 date: "2020-10-05"
-categories:
+tags:
   - "c sharp"
   - "solid principle"
 

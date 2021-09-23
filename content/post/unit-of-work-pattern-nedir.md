@@ -2,7 +2,7 @@
 # Common-Defined params
 title: "Unit Of Work Pattern Nedir?"
 date: "2020-12-27"
-categories:
+tags:
   - "c sharp"
   - "unit of work"
 

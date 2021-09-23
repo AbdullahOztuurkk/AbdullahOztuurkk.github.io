@@ -2,7 +2,7 @@
 # Common-Defined params
 title: "Swagger Nedir ? .NET Core Swagger Entegrasyonu"
 date: "2020-10-07"
-categories:
+tags:
   - "dotnet"
   - "web api"
   - "swagger"

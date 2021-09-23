@@ -2,7 +2,7 @@
 # Common-Defined params
 title: "Yazılıma Nereden başlamalıyım?"
 date: "2020-10-05"
-categories:
+tags:
   - "yazılım"
 
 # Theme-Defined params
