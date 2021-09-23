@@ -1,0 +1,91 @@
+# General
+- id: read_more
+  translation: "Daha fazlasını oku…"
+
+- id: menu_label
+  translation: "Menü"
+
+- id: sidemenu_title
+  translation: "Menü"
+
+# Post meta
+- id: meta_lastmod
+  translation: "Son Güncelleme"
+
+- id: meta_translations
+  translation: "Çeviriler"
+
+# Table of Contents
+- id: toc_title
+  translation: "Sayfa İçeriği"
+
+# Post nav
+- id: post_nav_prev
+  translation: "Önceki"
+
+- id: post_nav_next
+  translation: "Sonraki"
+
+# Authorbox
+- id: authorbox_name
+  translation: "{{ .Name }} Hakkında"
+
+# Sidebar
+- id: sidebar_warning
+  translation: "DİKKAT"
+
+- id: sidebar_recommendation
+  translation: "Lütfen en az bir yeni menü aracını aktifleştirin."
+
+# Search widget
+- id: search_placeholder
+  translation: "ARA…"
+
+# Languages widget
+- id: languages_title
+  translation: "Diller"
+
+# Categories widget
+- id: categories_title
+  translation: "Kategoriler"
+
+# Recent Posts widget
+- id: recent_title
+  translation: "Son Gönderiler"
+
+# Social widget
+- id: social_title
+  translation: "Sosyal"
+
+# Tags List widget
+- id: tags_title
+  translation: "Etiketler"
+
+# Footer
+- id: footer_credits
+  translation: ""
+
+# 404
+- id: 404_title
+  translation: "404. Sayfa bulunamadı."
+
+- id: 404_text
+  translation:
+    "Aradığınız sayfa taşınmış, silinmiş veya mevcut değil. Lütfen aramayı kullanın veya adresine gidin."
+
+- id: 404_linktext
+  translation: "Ana sayfa"
+
+# No posts empty state
+- id: noposts_warning_title
+  translation: "Henüz bir gönderiniz yok!"
+
+- id: noposts_warning_description
+  translation:
+    "<b>İçerik</b> dizini altındaki herhangi bir klasörde bir şey paylaştığınızda burada görünecektir. \  
+    Varsayılan olarak ana sayfada yalnızca bir bölüm (en çok gönderi içeren) görüntülenecektir." 
+
+- id: noposts_warning_tip
+  translation:
+    "<b>İpucu:</b><b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">Ana Kısımlar</a></b> \
+    ile istediğiniz kadar bölüm gösterebilirsiniz."
