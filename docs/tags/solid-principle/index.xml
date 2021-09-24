@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>solid principle on Abdullah Öztürk</title>
+    <link>https://abdullahoztuurkk.github.io/tags/solid-principle/</link>
+    <description>Recent content in solid principle on Abdullah Öztürk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullahoztuurkk.github.io/tags/solid-principle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dependency Injection Nedir?</title>
+      <link>https://abdullahoztuurkk.github.io/post/dependency-injection-nedir/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/dependency-injection-nedir/</guid>
+      <description>Merhaba,
+Size ilk yazımda programcılar açısından çok önemli olan DI prensibini anlatmak istiyorum.SOLID prensiplerinin son harfi olan Dependency Injection tekniğinin amacı sınıflar arasında bağımlılıkları olabildiğince azaltmaktır. Size bunu örnekler üzerinden anlatmak istiyorum.
+Mesaj gönderici servislerimiz olsun. Öncelikle hepsi için bir interface yazalım.
+public interface ISender { public void SendMessage(); } Şimdi bu interface’i implemente eden diğer class’larımızı yazalım.
+public class MailSender : ISender { public void SendMessage() { Console.WriteLine(&amp;#34;Mail Mesajı gönderildi.</description>
+    </item>
+    
+  </channel>
+</rss>

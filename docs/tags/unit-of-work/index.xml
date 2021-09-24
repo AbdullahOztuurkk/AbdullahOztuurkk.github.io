@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unit of work on Abdullah Öztürk</title>
+    <link>https://abdullahoztuurkk.github.io/tags/unit-of-work/</link>
+    <description>Recent content in unit of work on Abdullah Öztürk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullahoztuurkk.github.io/tags/unit-of-work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unit Of Work Pattern Nedir?</title>
+      <link>https://abdullahoztuurkk.github.io/post/unit-of-work-pattern-nedir/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/unit-of-work-pattern-nedir/</guid>
+      <description>Merhaba Arkadaşlar,
+Bu makalemde generic repository ile Unit of Work tasarım deseni nasıl kullanılır , ne işe yarar gibi konularını işleyeceğiz.
+Generic Repository : Oluşturduğumuz bu sınıf , veritabanında karşılığı olan tüm tablolar için genel bir CRUD işlemlerini yapabilmemizi sağlar. Bu sayede kod okunabilirliğini arttırmışken DRY (Don’t Repeat Yourself) yazılım geliştirme ilkesini de çiğnememiş oluruz.
+Unit Of Work : Veritabanı ile ilgili tüm işlemlerin tek kanaldan yapılmasını sağlayan ve yapılan tüm işlemlerin hafızada tutularak toplu halde gerçekleştirilmesini sağlayan bir tasarım desenidir.</description>
+    </item>
+    
+  </channel>
+</rss>

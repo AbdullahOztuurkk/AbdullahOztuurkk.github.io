@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abdullah Öztürk</title>
+    <link>https://abdullahoztuurkk.github.io/</link>
+    <description>Recent content on Abdullah Öztürk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullahoztuurkk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CQRS ( Command Query Responsibility Segregation) Nedir?</title>
+      <link>https://abdullahoztuurkk.github.io/post/command-query-responsibility-segregation-nedir/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/command-query-responsibility-segregation-nedir/</guid>
+      <description>Herkese merhaba,
+Bu makalemde CQRS pattern kullanımına, ne olduğuna, nasıl kullanıldığına ve ne zaman kullanılması gerektiği gibi konuların üzerinde duracağız.
+Command Query Responsibility Segregation yani kısaca CQRS, isminden de anlayacağımız üzere komut ve sorguların ayrıştırılması prensibine dayanıyor. Bu prensibe göre “ bir metot, bir nesnenin durumunu değiştirmelidir yada geriye değer döndürmelidir. İkisini de aynı anda yapmamalıdır. ”
+Command : Bir nesnenin durumunu değiştiren işlemlerdir. Query : Tetiklenen bir olay sonucu geriye bir değer döndüren işlemlerdir.</description>
+    </item>
+    
+    <item>
+      <title>Unit Of Work Pattern Nedir?</title>
+      <link>https://abdullahoztuurkk.github.io/post/unit-of-work-pattern-nedir/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/unit-of-work-pattern-nedir/</guid>
+      <description>Merhaba Arkadaşlar,
+Bu makalemde generic repository ile Unit of Work tasarım deseni nasıl kullanılır , ne işe yarar gibi konularını işleyeceğiz.
+Generic Repository : Oluşturduğumuz bu sınıf , veritabanında karşılığı olan tüm tablolar için genel bir CRUD işlemlerini yapabilmemizi sağlar. Bu sayede kod okunabilirliğini arttırmışken DRY (Don’t Repeat Yourself) yazılım geliştirme ilkesini de çiğnememiş oluruz.
+Unit Of Work : Veritabanı ile ilgili tüm işlemlerin tek kanaldan yapılmasını sağlayan ve yapılan tüm işlemlerin hafızada tutularak toplu halde gerçekleştirilmesini sağlayan bir tasarım desenidir.</description>
+    </item>
+    
+    <item>
+      <title>Swagger Nedir ? .NET Core Swagger Entegrasyonu</title>
+      <link>https://abdullahoztuurkk.github.io/post/application-programming-interface-nedir/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/application-programming-interface-nedir/</guid>
+      <description>Merhabalar,
+Bugün restful api üzerinde kullanacağımız swagger nedir, ne amaçla kullanılır ve nasıl kullanılır gibi soruların cevaplarını bu makalemde cevaplayacağım. Her şeyden önce API nedir ve neden ihtiyaç duyarız, bu soruları kendimize sormamız lazım.
+Application Programming Interface (API) Nedir? Bir uygulamaya ait işlevlerin ve üretilen, depolanan verilerin başka tür uygulamalarda da kullanılması için geliştirilen yapı olarak özetleyebiliriz. Bir örnek verecek olursak web üzerinde iletişim programı yaptınız ve aynı şekilde kullandığınız veritabanindaki verileri mobilde de kullanmak istiyorsunuz.</description>
+    </item>
+    
+    <item>
+      <title>Dependency Injection Nedir?</title>
+      <link>https://abdullahoztuurkk.github.io/post/dependency-injection-nedir/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/dependency-injection-nedir/</guid>
+      <description>Merhaba,
+Size ilk yazımda programcılar açısından çok önemli olan DI prensibini anlatmak istiyorum.SOLID prensiplerinin son harfi olan Dependency Injection tekniğinin amacı sınıflar arasında bağımlılıkları olabildiğince azaltmaktır. Size bunu örnekler üzerinden anlatmak istiyorum.
+Mesaj gönderici servislerimiz olsun. Öncelikle hepsi için bir interface yazalım.
+public interface ISender { public void SendMessage(); } Şimdi bu interface’i implemente eden diğer class’larımızı yazalım.
+public class MailSender : ISender { public void SendMessage() { Console.WriteLine(&amp;#34;Mail Mesajı gönderildi.</description>
+    </item>
+    
+    <item>
+      <title>Yazılıma Nereden başlamalıyım?</title>
+      <link>https://abdullahoztuurkk.github.io/post/yazilima-nereden-baslamaliyim/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/yazilima-nereden-baslamaliyim/</guid>
+      <description>Merhaba arkadaşlar,
+Uzun bir aradan sonra yeni yazımla karşınızdayım. Genel olarak birçok arkadaşımız yazılıma nereden başlayacağını, nasıl ilerleyeceğini, hangi alanı seçeceğini ve bu sektörde nasıl tutunacağını bilmediği için rehber niteliğinde bir makale hazırlamaya karar verdim. Herşeyden önce birkaç terimi size hatırlatayım sonrasında asıl konumuza girelim.
+Yazılım : En kısa haliyle elektronik aygıtların belirli bir işi yapması için yazılmış kod dizisi diyebiliriz.
+Algoritma : Belirli bir işin doğru bir şekilde gerçekleşmesi için yapılması gereken adım sırası olarak tanımlayabiliriz.</description>
+    </item>
+    
+  </channel>
+</rss>

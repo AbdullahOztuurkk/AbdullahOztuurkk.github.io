@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yazılım on Abdullah Öztürk</title>
+    <link>https://abdullahoztuurkk.github.io/tags/yaz%C4%B1l%C4%B1m/</link>
+    <description>Recent content in yazılım on Abdullah Öztürk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullahoztuurkk.github.io/tags/yaz%C4%B1l%C4%B1m/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yazılıma Nereden başlamalıyım?</title>
+      <link>https://abdullahoztuurkk.github.io/post/yazilima-nereden-baslamaliyim/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullahoztuurkk.github.io/post/yazilima-nereden-baslamaliyim/</guid>
+      <description>Merhaba arkadaşlar,
+Uzun bir aradan sonra yeni yazımla karşınızdayım. Genel olarak birçok arkadaşımız yazılıma nereden başlayacağını, nasıl ilerleyeceğini, hangi alanı seçeceğini ve bu sektörde nasıl tutunacağını bilmediği için rehber niteliğinde bir makale hazırlamaya karar verdim. Herşeyden önce birkaç terimi size hatırlatayım sonrasında asıl konumuza girelim.
+Yazılım : En kısa haliyle elektronik aygıtların belirli bir işi yapması için yazılmış kod dizisi diyebiliriz.
+Algoritma : Belirli bir işin doğru bir şekilde gerçekleşmesi için yapılması gereken adım sırası olarak tanımlayabiliriz.</description>
+    </item>
+    
+  </channel>
+</rss>
