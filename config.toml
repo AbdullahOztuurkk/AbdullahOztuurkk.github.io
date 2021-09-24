@@ -1,5 +1,6 @@
-baseurl = "https://www.AbdullahOztuurkk.github.io/"
+baseURL = "https://abdullahoztuurkk.github.io/"
 canonifyURLs = true
+publishDir = "docs"
 title = "Abdullah Öztürk"
 languageCode = "tr"
 defaultContentLanguage = "tr"
