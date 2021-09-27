@@ -72,3 +72,10 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   title = "Medium"
   url = "https://abdullahozturkk.medium.com"
   icon = "svg/medium.svg"
+
+[menu]
+  [[menu.main]]
+  name = "Anasayfa"
+  identifier = "homepage"
+  weight = 10
+  url = "/"
