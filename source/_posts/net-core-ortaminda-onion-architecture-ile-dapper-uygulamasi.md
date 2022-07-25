@@ -1,5 +1,6 @@
 ---
 title:  ".NET Core Ortamında Onion Architecture ile Dapper Uygulaması"
+cover: /img/net-core-ortaminda-onion-architecture-ile-dapper-uygulamasi/index.jpg
 date:   2022-07-15
 tags:
 - .Net Core

@@ -1,5 +1,6 @@
 ---
 title:  "Swagger Nedir ? .NET Core Swagger Entegrasyonu"
+cover: /img/application-programming-interface-nedir/index.png
 date:   2020-10-7
 tags:
 - .Net Core

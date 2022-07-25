@@ -1,5 +1,6 @@
 ---
 title:  "Unit Of Work Pattern Nedir?"
+cover: /img/unit-of-work-pattern-nedir/index.png
 date:   2020-12-27
 tags:
 - .Net Core

@@ -1,5 +1,6 @@
 ---
 title:  "Docker Nedir?"
+cover: /img/docker-nedir/index.jpg
 date:   2022-06-19
 tags:
 - Devops

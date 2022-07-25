@@ -1,5 +1,6 @@
 ---
 title:  "Efektif Dockerfile Kullanımı"
+cover: /img/efektif-dockerfile-kullanimi/index.jpg
 date:   2022-06-28
 tags:
 - Devops

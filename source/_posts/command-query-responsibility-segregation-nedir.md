@@ -1,5 +1,6 @@
 ---
 title:  "CQRS ( Command Query Responsibility Segregation) Nedir?"
+cover: /img/command-query-responsibility-segregation-nedir/index.png
 date:   2021-01-21
 tags:
 - .Net Core

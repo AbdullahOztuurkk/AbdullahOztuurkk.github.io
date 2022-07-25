@@ -1,5 +1,6 @@
 ---
 title:  "Dependency Injection Nedir?"
+cover: /img/dependency-injection-nedir/index.png
 date:   2020-10-15
 tags:
 - C#

@@ -1,5 +1,6 @@
 ---
 title:  "Yazılıma Nereden başlamalıyım?"
+cover: /img/yazilima-nereden-baslamaliyim/index.png
 date:   2020-10-5
 tags:
 - Kariyer
