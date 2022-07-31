@@ -228,7 +228,7 @@ widgets:
         # Author's current location
         location: Sivas
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://avatars.githubusercontent.com/u/54680491?v=4
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
