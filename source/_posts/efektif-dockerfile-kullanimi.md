@@ -7,7 +7,7 @@ tags:
 - Docker
 ---
 
-Merhaba Arkadaşlar, bugün **dockerfile** yazarken nelere dikkat etmeliyiz, hangi kurallara dikkat etmeliyiz ki kaliteli bir dockerfile ortaya çıkabiliriz, bundan bahsedeceğim. Asıl konumuza geçmeden önce bilgi edinme açısından Docker ile ilgili önceki yazıma [buradan](./docker-nedir) ulaşabilirsiniz.
+Merhaba Arkadaşlar, bugün **dockerfile** yazarken nelere dikkat etmeliyiz, hangi kurallara dikkat etmeliyiz ki kaliteli bir dockerfile ortaya çıkabiliriz, bundan bahsedeceğim. Asıl konumuza geçmeden önce bilgi edinme açısından Docker ile ilgili önceki yazıma [buradan][docker-article] ulaşabilirsiniz.
 
 Eğer Devops ile ilgileniyorsanız ya da Docker ile elinizi kirletmek istiyorsanız etkili bir dockerfile dosyasının öneminin farkındasınızdır. **Dockerfile** belli bir image oluşturmak için var olan tüm katmanların madde madde yazıldığı ve tüm işlemlerin detaylıca belirtildiği text dosyalarıdır. Son işlem gerçekleştirildiğinde elinizde güncel Docker image olur. Bu dockerfile, işlemlerinizi otomatize eder ve yaptığınız tüm değişiklikleri takip etmenize yardımcı olur.
 
@@ -25,7 +25,9 @@ Sadece ihtiyacımız olan paketlerin indirilmesi için bir dosya oluşturup kull
 ### 2. Tüm RUN Komutlarını Aynı Anda Çalıştırın!
 Dockerfile içerisinde belirttiğimiz her bir RUN komutu ayrı bir katman oluşturur ve bellekte yer kaplar. Birçok RUN komutunun olması durumunda Dockerfile boyutu oldukça büyüyecektir. Tek bir komut halinde tüm RUN komutlarını yazabilirsiniz. Aşağıda bu ikisi arasındaki farkı görebilirsiniz.
 
-<img src="/img/efektif-dockerfile-kullanimi/multiple-run-statement.png" height="300px">
+| ![][multiple-run-statement] | 
+|:--:| 
+| Çoklu RUN komut durumu |
 
 ### 3) Mümkün Oldukça .dockerignore Dosyası Kullanın!
 Git tarafında .gitignore kullandığımız gibi, burada da Docker build kapsamında hariç tutmak istediğimiz dosyalar ve klasörlerin .dockerignore dosyası sayesinde üstesinden gelebiliriz. Bu durum, istenmeyen dosyaların docker konteyner içerisinde olmasını engelleyeceği için daha küçük boyut ve daha hızlı bir deployment ortamı sağlar.
@@ -42,6 +44,13 @@ Alpine Linux, oldukça küçük boyutlu (yaklaşık 5MB) bir işletim sistemidir
 ### 7) Çok Katmanlı Dockerfile Dosyaları Kullanın!
 Multi-stage docker yapıları, bize birden çok FROM ifadesiyle Dockerfile dosyası yazmamıza izin verir. Her FROM komutu farklı bir base image kullanarak Image’inizin son halinin boyutunu küçültmenizi sağlar.
 
-<img src="/img/efektif-dockerfile-kullanimi/multi-stage-dockerfile.png" height="300px">
+| ![][multi-stage-dockerfile] | 
+|:--:| 
+| Çok katmanlı Dockerfile Örneği|
 
 Özet olarak, dockerfile yazarken özellikle dikkat etmemiz gereken kısımlara değinmeye çalıştım. Okuduğunuz için teşekkür ederim. Bir sonraki yazıda görüşmek dileğiyle.
+
+<!-- Links -->
+[multiple-run-statement]: /img/efektif-dockerfile-kullanimi/multiple-run-statement.png
+[multi-stage-dockerfile]: /img/efektif-dockerfile-kullanimi/multi-stage-dockerfile.png
+[docker-article]: ./docker-nedir

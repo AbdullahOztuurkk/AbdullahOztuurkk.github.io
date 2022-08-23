@@ -21,7 +21,9 @@ O zaman gelin , beraber altyapıyı kuralım. Öncelikle çalışmak istediğimi
 <!-- more -->
 Solution içerisinde 2 adet klasörümüz bulunmakta. Bunlardan biri model sınıflarımızın olduğu “Entities” klasörü , diğeri de veritabanı ile ilgili sınıfların olduğu “Data” klasörümüz. Makale bitiminde aşağıdaki gibi bir hiyerarşik yapı oluşturmuş olacağız.
 
-![Klasör Yapısı](/img/unit-of-work-pattern-nedir/solution-structure.png)
+| ![][folder-structure] | 
+|:--:| 
+| Uygulamanın Genel Yapısı |
 
 “Entities” klasörüne gelip model sınıflarımızı oluşturmaya başlayalım.
 
@@ -216,4 +218,8 @@ namespace UnitOfWorkApp
 ```
 Bu makalemde temel düzeyde unit of work tasarım deseninin kurumsal mimaride nasıl implemente edileceğini gördük.
 
-Projenin github linkine [buradan](https://github.com/AbdullahOztuurkk/UnitOfWorkTutorial) ulaşabilirsiniz.
+Projenin github linkine **[buradan][project-link]** ulaşabilirsiniz.
+
+<!-- Links -->
+[folder-structure]: /img/unit-of-work-pattern-nedir/solution-structure.png
+[project-link]: https://github.com/AbdullahOztuurkk/UnitOfWorkTutorial

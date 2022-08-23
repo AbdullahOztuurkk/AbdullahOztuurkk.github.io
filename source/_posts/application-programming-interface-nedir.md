@@ -22,7 +22,7 @@ Web API geliştirirken en önemli ihtiyaç dökümantasyon ihtiyacıdır. API i�
 
 Öncelikle bir solution project oluşturalım ve gerekli olan Business, DataAccess, Entities, UI ve son olarak en çok uğraşacağımız Web API katmanlarını ekleyelim. API katmanı dışındaki katmanları yazdığımızı varsayalım. API katmanı üzerine sağ tıklayalım ve Manage Nuget Packages seçeneğine tıklayalım.
 
-![Nuget Swagger Paketi](/img/application-programming-interface-nedir/nuget-nswag.png)
+![Nuget Swagger Paketi][nuget-package-manager]
 
 NSwag.AspNetCore adlı kütüphanemizi indiriyoruz. Kullanıcı arayüzüne gitmeden önce startup.cs dosyasında birkaç ayar yapmamız gerekiyor.
 
@@ -71,17 +71,17 @@ public class Startup
 ```
 Ayarlarımızı yaptık. Şimdi projemizi API üzerinden çalıştıralım ve localhost:PORT/swagger linkine gidelim. Karşımıza aşağıdaki gibi bir ekran gelecek. Şimdi bu ekrandakilerin neler olduğunu anlamaya çalışalım.
 
-![Swagger Arayüzü](/img/application-programming-interface-nedir/swagger-ui.png)
+![Swagger Arayüzü][swagger-ui]
 
 Sayfamızın başında başlık, versiyon numarası gibi birkaç metin görebiliyoruz. Burayı makalenin sonlarına doğru beraber düzenleyeceğiz. Altında, API’de sahip olduğumuz controller isimlerini görüyoruz. Bizde şuanlık sadece Books controller var. İçerisinde de tanımlanmış metodları ve HTTP protokollerini görüyoruz lakin açıklaması olmadığını farkediyoruz. Altında Models kısmını görüyoruz.Burada API içerisinde kullanılan model sınıflarını görebiliyoruz . Model içerisinde de hangi kolonların hangi türde olduğunu da görebiliyoruz . Tabi normalde bu kadar az içerik görünmez, ben kısa ve öz olması açısından sadece BookController ile çalıştım ama siz daha fazla içerik ile uğraşabilirsiniz.
 
 Alttaki fotoğrafta sol kısım henüz açıklama eklemediğimiz, sağ kısım ise açıklama eklememizden sonraki hali.
 
-![Books Controller](/img/application-programming-interface-nedir/api-controllers.png)
+![Books Controller][books-controller]
 
 Ancak tekrar aynı URL’e bağlanmaya çalıştığımızda açıklamamız görünmeyecektir. Bunu engellemek için Web API katmanı üzerinden Properties’e basıp Build sekmesine tıklayın. XML documentation file seçeneğine tik atın. (Fotoğraf aşağıda)
 
-![Uygulama Ayarları](/img/application-programming-interface-nedir/app-settings.png)
+![Uygulama Ayarları][app-settings]
 
 Çalıştırmadan önce yukarıda da bahsettiğim gibi başlık versiyon numarası vb. kısımları düzenleyelim. Startup.cs dosyasında ConfigureServices metodunu tekrardan düzenledik.
 
@@ -106,6 +106,13 @@ public void ConfigureServices(IServiceCollection services)
 ```
 Bu kısmı kendi dökümasyonundan da bakabilirsiniz . Birçok ayar bulunmakta. Artık tüm ayarları yapmış bulunuyoruz. Gelin beraber sonucu görelim.
 
-![Swagger Arayüzünün Son Hali](/img/application-programming-interface-nedir/swagger-ui-last.png)
+![Swagger Arayüzünün Son Hali][swagger-ui-final]
 
 Swagger hakkında daha fazla bilgi edinmek için kendi dökümantasyonunu okuyabilirsiniz.
+
+<!-- Links -->
+[swagger-ui-final]: /img/application-programming-interface-nedir/swagger-ui-last.png
+[app-settings]: /img/application-programming-interface-nedir/app-settings.png
+[books-controller]: /img/application-programming-interface-nedir/api-controllers.png
+[swagger-ui]: /img/application-programming-interface-nedir/swagger-ui.png
+[nuget-package-manager]: /img/application-programming-interface-nedir/nuget-nswag.png

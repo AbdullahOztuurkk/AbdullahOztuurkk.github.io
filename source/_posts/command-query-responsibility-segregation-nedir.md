@@ -216,9 +216,12 @@ IMediator arayüzünü enjekte ettikten sonra localhost:44347/api/player endpoin
 
 Örnek projeyi inceleyerek MediatR ve CQRS deseni arasındaki ilişkiyi daha iyi anlayabilirsiniz.
 
-Örnek Proje Linki : [.Net-Core-MediatR-CQRS](https://github.com/AbdullahOztuurkk/.Net-Core-MediatR-CQRS)
+Örnek Proje Linki : [.Net-Core-MediatR-CQRS][project-link]
 
 #### Kaynaklar :
 
 - https://www.objectivity.co.uk/blog/when-to-use-and-not-to-use-cqrs/
 - https://gcifguvercin.medium.com/cqrs-nedir-muhte%C5%9Fem-i%CC%87kili-ayr%C4%B1l%C4%B1yor-mu-a2b2f4032d34
+
+<!-- Links -->
+[project-link]: https://github.com/AbdullahOztuurkk/.Net-Core-MediatR-CQRS

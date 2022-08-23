@@ -15,18 +15,19 @@ Merhaba Arkadaşlar, uzun bir aradan sonra tekrardan sizinleyim. Bugün yazılı
 
 <!-- more -->
 
-<p align="center">
-    <img src="/img/docker-nedir/docker_vs_virtual_machine.png">
-</p>
+| ![][docker-vs-virtual-machine] | 
+|:--:| 
+| Docker ve Sanal Makine karşılaştırması |
+
 >> Sanal Makine üzerinde çalışan işletim sistemi, altta çalışan Hypervisor’un varlığından haberdar değildir.
 
 **Cevap:** Hayır, sanal makineler konteyner oluşturabilmeyi sağlamasına rağmen uygulamaların çalışabilmesi için bir işletim sistemini zorunlu hale getiriyor. Maliyet açısından büyük bir problemle karşı karşıya geliyoruz. Docker ise var olan işletim sistemi üzerinde işlem izolasyonu sağlıyor.
 
 Aşağıda konteyner mimarisi ile sanal makine mimarisi karşılaştırmasını görebilirsiniz.
 
-<p align="center">
-    <img src="/img/docker-nedir/container_arch_vs_virtual_arch.png" height="500px">
-</p>
+| ![][container-arch-vs-virtual-arch] | 
+|:--:| 
+| Container Mimarisi ile Sanal Mimari karşılaştırması |
 
 <hr>
 
@@ -36,9 +37,9 @@ Docker bileşenlerine göz atalım ve teker teker bu bileşenler ne yapıyor, a�
 
 **Docker Daemon:** Tüm Docker işlemlerini bu servis gerçekleştirmekte olup client üzerinden gelen api isteklerini dinlemekte ve yönetmektedir.
 
-<p align="center">
-    <img src="/img/docker-nedir/docker_components.png" height="500px">
-</p>
+| ![][docker-components] | 
+|:--:| 
+| Docker Bileşenleri |
 
 Bu zamana kadar Docker’ın sanal makine ile karşılaştırılması ve kendi bileşenlerinden bahsettik. Gelin, Docker kullanırken en çok rastlayacağımız kavramları açıklayalım.
 
@@ -146,3 +147,8 @@ services:
 Örnek bir E-Ticaret sitesi baz alınarak hazırlanmıştır.
 
 > Okuduğunuz için teşekkür ederim. Bir sonraki yazıda görüşmek dileğiyle.
+
+<!-- Links -->
+[docker-vs-virtual-machine]: /img/docker-nedir/docker_vs_virtual_machine.png
+[container-arch-vs-virtual-arch]: /img/docker-nedir/container_arch_vs_virtual_arch.png
+[docker-components]: /img/docker-nedir/docker_components.png

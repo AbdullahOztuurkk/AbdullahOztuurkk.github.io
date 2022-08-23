@@ -88,8 +88,11 @@ static void Main(string[] args)
 }
 ```
 
-![Konsol Çıktısı](/img/dependency-injection-nedir/console-output.png)
+![Konsol Çıktısı][console-output]
 
 Bağımlılığımızı en aza indirgeyerek uygulamamızı yazdık ve gördüğünüz üzere başarılı bir şekilde çalıştı.
 
 Dependency Injection kullanarak projelerinize daha rahat yeni bir sınıf dahil edebilirsiniz ve olası bir değişikliğe karşı büyük bir vakit kaybının önüne geçebilirsiniz.Ninject,Autofac gibi birçok DI kütüphanesi bulunmakta. İnternetten bunlarla ilgili araştırma yapabilirsiniz.
+
+<!-- Links -->
+[console-output]: /img/dependency-injection-nedir/console-output.png

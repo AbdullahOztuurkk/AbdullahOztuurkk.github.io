@@ -15,14 +15,14 @@ Merhaba arkadaşlar,
 
 Bugün MediatR kapsamında gerçekleştirilen her bir istek için oluşturduğumuz genel yapıları (validation, logging vb) daha merkezi bir sisteme nasıl taşırız gibi soruların cevaplarına değineceğim. Genel tanımı yaptıktan sonra .NET Core ortamında bir uygulama geliştireceğiz. 
 
-MediatR kütüphanesinin ne işe yaradığını bilmiyorsanız [buradaki](./command-query-responsibility-segregation-nedir) yazımı okuyabilirsiniz.
+MediatR kütüphanesinin ne işe yaradığını bilmiyorsanız [buradaki][mediatr-article] yazımı okuyabilirsiniz.
 
 ## Pipelines
 Bir uygulamaya istek attığımız her isteğimize(request) karşın bir yanıt (response) döner. Yalnız bu request - response döngüsünde farkında olunmayan bir kısım var, **pipelines**. **Pipelines** sayesinde gönderilen istek birtakım operasyonlardan geçirilir ve eğer bir sıkıntı yoksa döngüye devam edilir. Bir problem meydana gelirse istek geri çevrilir ve response döndürülür. Aşağıda .NET Core pipeline mimarisinin yapısını görmektesiniz.
 
 <!-- more -->
 
-| ![project-structure](/img/net-core-ortaminda-mediatr-pipeline-gelistirelim/net-core-pipeline-architecture.png) | 
+| ![][pipeline-arch] | 
 |:--:| 
 | .Net Core Pipeline Mimarisi |
 
@@ -328,7 +328,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-API dökümantasyonunu oluşturacağımız **Swagger** için de çeşitli ayarlar yapmış bulunmaktayız. Swagger hakkında kendinizi eksik hissediyorsanız [buradaki](./dotnet-core-swagger-entegrasyonu) yazımdan bilgilenebilirsiniz. Startup tarafındaki ayarlamalarımızı yaptığımıza göre Controller tarafını kodlamaya başlayabiliriz. Aşağıda asıl konudan kopmamak adına HttpPost metotlarını görmektesiniz.
+API dökümantasyonunu oluşturacağımız **Swagger** için de çeşitli ayarlar yapmış bulunmaktayız. Swagger hakkında kendinizi eksik hissediyorsanız [buradaki][swagger-article] yazımdan bilgilenebilirsiniz. Startup tarafındaki ayarlamalarımızı yaptığımıza göre Controller tarafını kodlamaya başlayabiliriz. Aşağıda asıl konudan kopmamak adına HttpPost metotlarını görmektesiniz.
 
 ```cs
 [ApiController]
@@ -389,15 +389,21 @@ public class TagController : ControllerBase
 
 Şimdi programımızı logları görmek açısından IIS Express üzerinden değil de CleanArch.API üzerinden başlatalım ve bir tane geçerli request objesi gönderelim ve logları gözlemleyelim. Sonrasında ise geçersiz bir request objesi gönderelim ve **ValidationBehaviour** sınıfını gözlemleyelim.
 
-| ![Postman Çıktısı](/img/net-core-ortaminda-mediatr-pipeline-gelistirelim/postman_output.png) | 
+| ![][postman-output] | 
+|:--:| 
+| Postman Çıktısı |
 
 Veri başarıyla eklendi, şimdi loglarımızı inceyelim. Bakalım nasıl bir çıktı verdi?
 
-| ![LoggingBehaviour Çıktısı](/img/net-core-ortaminda-mediatr-pipeline-gelistirelim/logbehaviour_output.png) | 
+| ![][logging-behaviour-output] | 
+|:--:| 
+| LoggingBehaviour Çıktısı |
 
 Gördüğünüz gibi hangi request’in gönderildiği, hangi property’nin hangi değere sahip olduğu ve response türü gibi özellikleri yazdırabildik. Şimdi geçersiz bir request objesi gönderelim ve response modelini inceleyelim ve yazımızı sonlandıralım.
 
-| ![ValidationBehaviour Çıktısı](/img/net-core-ortaminda-mediatr-pipeline-gelistirelim/validationbehaviour_output.png) | 
+| ![][validation-behaviour-output] | 
+|:--:| 
+| ValidationBehaviour Çıktısı |
 
 Evet, **RequestHandler** sınıfımızda herhangi bir validasyon kodu yazmasak da **ValidationBehaviour** sınıfı request objesi için bizim yerimize response döndü.
 
@@ -405,6 +411,15 @@ Evet, **RequestHandler** sınıfımızda herhangi bir validasyon kodu yazmasak d
 
 Bu yazımda pipeline nedir, tam olarak ne işe yarar ve MediatR implementasyonu nasıl gerçekleştirilir gibi soruların cevaplarını vermeye çalıştım.
 
-Projeyi tam anlamıyla incelemek için github linkine [buradan](https://github.com/AbdullahOztuurkk/CleanArchitecture) ulaşabilirsiniz.
+Projeyi tam anlamıyla incelemek için github linkine [buradan][project-link] ulaşabilirsiniz.
 
 Okuduğunuz için teşekkür ederim. Bir sonraki yazıda görüşmek dileğiyle.
+
+<!-- Links -->
+[postman-output]: /img/net-core-ortaminda-mediatr-pipeline-gelistirelim/postman_output.png
+[logging-behaviour-output]: /img/net-core-ortaminda-mediatr-pipeline-gelistirelim/logbehaviour_output.png
+[validation-behaviour-output]: (/img/net-core-ortaminda-mediatr-pipeline-gelistirelim/validationbehaviour_output.png
+[project-link]: https://github.com/AbdullahOztuurkk/CleanArchitecture
+[swagger-article]: ./dotnet-core-swagger-entegrasyonu
+[pipeline-arch]: /img/net-core-ortaminda-mediatr-pipeline-gelistirelim/net-core-pipeline-architecture.png
+[mediatr-article]: ./command-query-responsibility-segregation-nedir
