@@ -73,4 +73,6 @@ ignore: null
 theme: icarus
 
 deploy:
-  type: ''
+  type: 'git'
+  repo: https://github.com/AbdullahOztuurkk/Personal-website
+  branch: gh-pages
