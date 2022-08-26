@@ -1,0 +1,83 @@
+# The layout text of site
+
+# ----- Commons label -----
+
+layout:
+  post: Gönderi
+  category: Kategori
+  tag: Etiket
+
+# The tabs of sidebar
+tabs:
+  # format: <filename_without_extension>: <value>
+  home: Anasayfa
+  categories: Kategoriler
+  tags: Etiketler
+  archives: Arşiv
+  about: Hakkımda
+
+# the text displayed in the search bar & search results
+search:
+  hint: Arama Yap
+  cancel: Iptal et
+  no_results: Oops! Herhangi bir sonuç bulunamadı!
+
+panel:
+  lastmod: Yakın Zamanda Güncellenenler
+  trending_tags: Sık Kullanılan Etiketler
+  toc: Sayfa İçeriği
+
+copyright:
+  # Shown at the bottom of the post
+  license:
+    template: This post is licensed under :LICENSE_NAME by the author.
+    name: CC BY 4.0
+    link: https://creativecommons.org/licenses/by/4.0/
+
+  # Displayed in the footer
+  brief: Some rights reserved.
+  verbose: >-
+    Except where otherwise noted, the blog posts on this site are licensed
+    under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.
+
+meta: Powered by :PLATFORM with :THEME theme.
+
+not_found:
+  statment: Üzgünüz, bu URL'yi yanlış yerleştirdik veya var olmayan bir sayfaya gitmeye çalışıyor.
+
+notification:
+  update_found: A new version of content is available.
+  update: Update
+
+# ----- Posts related labels -----
+
+post:
+  written_by: Yazar 
+  posted: Eklenme Tarihi 
+  updated: Güncellenme Tarihi 
+  words: kelimeler
+  pageview_measure: görüntülenme
+  read_time:
+    unit: dakika 
+    prompt:  okuma süresi
+  relate_posts: Daha fazla okuyun
+  share: Paylaş
+  button:
+    next: İleri
+    previous: Geri
+    copy_code:
+      succeed: Kopyalandı!
+    share_link:
+      title: Linki kopyalayın
+      succeed: Link başarıyla kopyalandı!
+  # pinned prompt of posts list on homepage
+  pin_prompt: Sabitlendi
+
+# categories page
+categories:
+  category_measure:
+    singular: kategori
+    plural: kategoriler
+  post_measure:
+    singular: gönderi
+    plural: gönderiler
