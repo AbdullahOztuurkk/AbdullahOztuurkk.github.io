@@ -84,7 +84,7 @@ static void Main(string[] args)
 }
 ```
 
-![Konsol Çıktısı](/css/images/dependency-injection-nedir/console-output.png)
+![Konsol Çıktısı](../assets/img/dependency-injection-nedir/console-output.png)
 
 Bağımlılığımızı en aza indirgeyerek uygulamamızı yazdık ve gördüğünüz üzere başarılı bir şekilde çalıştı.
 

@@ -61,9 +61,7 @@ products = connection.Query<Product>(sql);
 
 Hadi o zaman gelin, yavaştan proje altyapısını oluşturalım ve konu anlatımına oradan devam edelim. **DapperORM** adında bir **.Net Core 5** uygulaması oluşturalım ve katmanlarımızı, klasör yapımızı aşağıdaki gibi düzenleyelim.
 
-| ![project-structure](/assets/images/net-core-ortaminda-onion-architecture-ile-dapper-uygulamasi/project-structure.png) | 
-|:--:| 
-| Onion Architecture kullanarak oluşturduğumuz proje altyapısı |
+| ![Onion Architecture kullanarak oluşturduğumuz proje altyapısı ][project-infrastructure] | 
 
 Domain katmanına gelip entity sınıflarımızı oluşturmaya başlayabiliriz.
 
@@ -206,7 +204,7 @@ public class CreateProductValidator : AbstractValidator<Product>
 }
 ```
 
-**Features** adlı bir klasör oluşturalım ve burada CRUD işlemleri için Command ve Query sınıflarını MediatR kullanarak oluşturalım. CQRS kullanarak oluşturduğumuz handler ve request yapılarına uzaksanız buradaki [yazımdan](/command-query-responsibility-segregation-nedir) bilgi edinebilirsiniz.Örnek olarak **CreateProductCommandHandler** sınıfımız aşağıdaki gibi görünmektedir.
+**Features** adlı bir klasör oluşturalım ve burada CRUD işlemleri için Command ve Query sınıflarını MediatR kullanarak oluşturalım. CQRS kullanarak oluşturduğumuz handler ve request yapılarına uzaksanız buradaki [yazımdan][mediatr-article] bilgi edinebilirsiniz.Örnek olarak **CreateProductCommandHandler** sınıfımız aşağıdaki gibi görünmektedir.
 
 ```cs
 public class CreateProductCommandRequest : IRequest<IResult>
@@ -451,7 +449,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-API dökümantasyonunu oluşturacağımız Swagger için de çeşitli ayarlar yapmış bulunmaktayız. Swagger hakkında kendinizi eksik hissediyorsanız [buradaki](/dotnet-core-swagger-entegrasyonu) yazımdan bilgilenebilirsiniz. Extension metotlarımızı da kullandığımıza göre son olarak Controller tarafına geçelim ve yazımızı sonlandıralım.
+API dökümantasyonunu oluşturacağımız Swagger için de çeşitli ayarlar yapmış bulunmaktayız. Swagger hakkında kendinizi eksik hissediyorsanız [buradaki][swagger-article] yazımdan bilgilenebilirsiniz. Extension metotlarımızı da kullandığımıza göre son olarak Controller tarafına geçelim ve yazımızı sonlandıralım.
 
 ```cs
 [Route("api/products")]
@@ -561,6 +559,12 @@ public class ProductController : ControllerBase
 
 Bu yazımda dapper nedir, özellikleri nedir ve nasıl kullanılır gibi soruların cevaplarını vermeye çalıştık.
 
-Projeyi tam anlamıyla incelemek için github linkine **[buradan](https://github.com/AbdullahOztuurkk/CleanDapper)** ulaşabilirsiniz.
+Projeyi tam anlamıyla incelemek için github linkine **[buradan][project-link]** ulaşabilirsiniz.
 
 > Okuduğunuz için teşekkür ederim. Bir sonraki yazıda görüşmek dileğiyle.
+
+<!-- Links -->
+[project-infrastructure]: ../assets/img/net-core-ortaminda-onion-architecture-ile-dapper-uygulamasi/project-structure.png
+[mediatr-article]: ../command-query-responsibility-segregation-nedir 
+[swagger-article]:(dotnet-core-swagger-entegrasyonu
+[project-link]: https://github.com/AbdullahOztuurkk/CleanDapper
