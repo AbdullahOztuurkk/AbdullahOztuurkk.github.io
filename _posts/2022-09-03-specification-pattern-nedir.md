@@ -275,7 +275,9 @@ public class TaskController : ControllerBase
 ```
 Dummy bir liste oluşturdum ve bunun üzerinden işlem yapacağız. IIS Express üzerinden ayağa kaldırdıktan sonra swagger üzerinden istek yapıyorum ve response modelimiz aşağıdaki şekilde dönüyor.
 
-| ![Swagger Response Model][postman-output] | 
+<p align="center">
+    <img src="../assets/img/specification-pattern-nedir/postman-output.png"/>
+</p>
 
 ---
 
