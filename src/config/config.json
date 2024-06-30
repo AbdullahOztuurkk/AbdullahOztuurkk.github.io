@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "Abdullah Öztürk - Kişisel Websitesi",
+    "base_url": "https://abdullahozturk.net",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "200",
+    "logo_height": "34",
+    "logo_text": "Abdullah Öztürk"
+  },
+
+  "settings": {
+    "pagination": 7,
+    "summary_length": 200
+  },
+
+  "metadata": {
+    "meta_author": "Abdullah Öztürk",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Abdullah Öztürk - Kişisel Websitesi"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2023 Abdullah Öztürk"
+  },
+
+  "contactinfo": {
+    "address": "İstanbul / Türkiye",
+    "email": "oabdullahozturk@yandex.com.tr",
+    "phone": ""
+  }
+}

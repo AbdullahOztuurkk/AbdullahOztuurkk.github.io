@@ -1,0 +1,26 @@
+{
+  "main": [
+    {
+      "name": "Anasayfa",
+      "url": "/"
+    },
+    {
+      "name": "Hakkında",
+      "url": "/about"
+    },
+    {
+      "name": "İletişim",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Hakkında",
+      "url": "/about"
+    },
+    {
+      "name": "İletişim",
+      "url": "/contact"
+    }
+  ]
+}
