@@ -18,12 +18,12 @@
 
   "metadata": {
     "meta_author": "Abdullah Öztürk",
-    "meta_image": "/images/og-image.png",
+    "meta_image": "/images/avatar.png",
     "meta_description": "Abdullah Öztürk - Kişisel Websitesi"
   },
 
   "params": {
-    "contact_form_action": "#",
+    "contact_form_action": "mailto:oabdullahozturk@yandex.com.tr",
     "copyright": "Copyright © 2023 Abdullah Öztürk"
   },
 
