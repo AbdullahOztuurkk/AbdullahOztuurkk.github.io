@@ -2,7 +2,7 @@
 title:  "📚 Bölüm 1 — Neden Modular Monolith?"
 date:   2025-10-21
 image: "/images/posts/bolum-1-neden-modular-monolith/index.png"
-categories: [".Net Core"]
+categories: ["Software"]
 tags: ["Modular Monolith",".Net Core","Modulith"]
 ---
 
