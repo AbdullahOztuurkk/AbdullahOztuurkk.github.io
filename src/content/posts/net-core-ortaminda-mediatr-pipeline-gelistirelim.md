@@ -67,22 +67,161 @@ public class Tag : BaseEntity
     public ICollection<Note> Notes { get; set; }
 }
 ```
-
 MediatR tarafında kullanacağımız request’e yanıt niteliğindeki response sınıfını oluşturalım.
 
 ```cs
-        //Get request values
-        IList<PropertyInfo> props = new List<PropertyInfo>(myType.GetProperties());
-        foreach (PropertyInfo prop in props)
+namespace CleanArch.Domain.Common
+{
+    public class AppResponse
+    {
+        public bool IsSucceed { get; internal set; }
+        public string Message { get; internal set; }
+        public int StatusCode { get; internal set; }
+
+        public AppResponse(bool isSucceed, string message, int statusCode)
         {
-            object propValue = prop.GetValue(request, null);
-            _logger.LogInformation("{Property} : {@Value}", prop.Name, propValue);
+            IsSucceed = isSucceed;
+            Message = message;
+            StatusCode = statusCode;
+        }
+    }
+
+    public class ErrorResponse : AppResponse
+    {
+        public ErrorResponse(string Message) : base(false, Message,400) { }
+    }
+
+    public class SuccessResponse : AppResponse
+    {
+        public SuccessResponse(string Message) : base(true, Message,200) { }
+    }
+}
+```
+
+---
+
+Application katmanına gelelim ve gerekli interface ve repository tanımlamalarını **Interfaces** klasörü altında gerçekleştirelim.
+
+```cs
+public interface IBaseRepository<T> where T:BaseEntity
+{
+    T Get(int id);
+    void Add(T entity);
+    void Update(T entity);
+    void Delete(int Id);
+    List<T> GetAll(Expression<Func<T, bool>> filter = null);
+}
+
+public interface INoteRepository:IBaseRepository<Note>
+{
+    List<Note> GetAllByContent(string content);
+    List<Note> GetAllByTag(string name);
+}
+
+public interface ITagRepository:IBaseRepository<Tag>
+{
+    List<Tag> GetAllByDescription(string description);
+}
+```
+
+Aynı katman içerisinde Validations için bir klasör oluşturalım ve içerisine ilgili event ile alakalı validasyon kurallarımızı yazalım. Aşağıda örnek olarak **CreateNoteValidator** kodları bulunmakta.
+
+```cs
+namespace CleanArch.Application.Validations.DeleteEvent
+{
+    public class CreateNoteValidator:AbstractValidator<CreateNoteCommandRequest>
+    {
+        public CreateNoteValidator()
+        {
+            RuleFor(pred => pred.Content)
+                .MinimumLength(1)
+                .MaximumLength(500)
+                .NotEmpty()
+                .Configure(rule => rule.MessageBuilder = _ => ValidationMessages.Note_Content_Length_Error);
+
+            RuleFor(pred => pred.Title)
+                .MinimumLength(1)
+                .MinimumLength(25)
+                .NotEmpty()
+                .Configure(rule => rule.MessageBuilder = _ => ValidationMessages.Note_Title_Length_Error);
+        }
+    }
+}
+```
+
+Configure metodu sayesinde zincirleme kurallarda tek bir mesaj dönmesini sağlayabiliyoruz.
+
+Features klasörü oluşturalım ve CommandHandler ile QueryHandler sınıflarımızı MediatR aracılığıyla oluşturalım. Örnek olarak **CreateNoteCommandHandler** sınıfımız aşağıdaki gibi görünmektedir.
+
+```cs
+namespace CleanArch.Application.Features.Commands.CreateEvent
+{
+    public class CreateNoteCommandRequest : IRequest<AppResponse>
+    {
+        public string Title { get; set; }
+        public string Content { get; set; }
+
+        public CreateNoteCommandRequest(string title, string content)
+        {
+            Title = title;
+            Content = content;
+        }
+    }
+    public class CreateNoteCommandHandler : IRequestHandler<CreateNoteCommandRequest, AppResponse>
+    {
+        private readonly IMapper mapper;
+        private readonly INoteRepository noteRepository;
+        public CreateNoteCommandHandler(IMapper mapper, INoteRepository noteRepository)
+        {
+            this.mapper = mapper;
+            this.noteRepository = noteRepository;
         }
 
-        var response = await next();
-        //Response
-        _logger.LogInformation($"Response Type : {typeof(TResponse).Name}");
-        return response;
+        public async Task<AppResponse> Handle(CreateNoteCommandRequest request, CancellationToken cancellationToken)
+        {
+            var note = mapper.Map<Domain.Entities.Note>(request);
+            noteRepository.Add(note);
+            return await Task.FromResult<AppResponse>(new SuccessResponse(ResultMessages.CREATED_NOTE_SUCCESSFULLY));
+        }
+    }
+}
+```
+
+Fark ettiyseniz herhangi bir validasyon işlemine tabi tutmuyoruz. Bunun gibi işlemleri pipeline sayesinde kontrol ediyor olacağız.
+
+Yazımızın en önemli kısmına geldik. Behaviour klasörü altında **ValidationBehaviour** adlı bir sınıf oluşturalım ve pipeline oluşturmaya yavaştan başlayalım.
+
+```cs
+public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
+    where TRequest : IRequest<TResponse>
+    where TResponse: AppResponse
+{
+    private readonly IEnumerable<IValidator<TRequest>> _validators;
+
+    public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators)
+    {
+        _validators = validators;
+    }
+
+    public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+    {
+        if (_validators.Any())
+        {
+            var context = new ValidationContext<TRequest>(request);
+
+            var validationResults = await Task.WhenAll(
+                _validators.Select(v =>
+                    v.ValidateAsync(context, cancellationToken)));
+
+            var failures = validationResults
+                .Where(r => r.Errors.Any())
+                .SelectMany(r => r.Errors)
+                .ToList();
+
+            if (failures.Any())
+                return (TResponse)await Task.FromResult<AppResponse>(new ErrorResponse(failures.First().ErrorMessage.ToString()));
+        }
+        return await next();
     }
 }
 ```
